@@ -1,0 +1,24 @@
+package com.example.git_test.entity;
+
+import java.time.LocalDateTime;
+import java.util.Date;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import lombok.Data;
+
+@Entity
+@Data
+public class ServiceCenter {
+
+    @Id
+    // 자동 시퀀스 증가(AUTO INCREMENT)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    Integer id;
+    String customer;
+    String prdName;
+    LocalDateTime purDate;
+    Date vstDate;
+}
